@@ -3,7 +3,7 @@
 
   "name": "Teatime",
   "description": "When it's teatime, it's teatime!",
-  "version": "0.1",
+  "version": "0.2",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -15,6 +15,10 @@
     "matches": ["<all_urls>"],
     "js": ["jquery.js", "content_script.js"]
   }],
+
+  "web_accessible_resources": [
+    "img/*.gif"
+  ],
 
   "permissions": [
     "activeTab"
