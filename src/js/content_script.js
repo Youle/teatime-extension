@@ -3,7 +3,7 @@
  */
 (function(){
     var _getGif = function(){
-        var url = 'img/' + Math.floor(Math.random() * 14) + '.gif';
+        var url = 'src/img/gif-collection/' + Math.floor(Math.random() * 14) + '.gif';
         return  chrome.extension.getURL(url)};
 
     function _changeImages($target) {
