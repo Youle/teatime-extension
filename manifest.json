@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Teatime",
+  "description": "When it's teatime, it's teatime!",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["jquery.js", "content_script.js"]
+  }],
+
+  "permissions": [
+    "activeTab"
+  ]
+}
