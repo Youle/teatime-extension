@@ -21,9 +21,7 @@
         }).each(function(){$(this).css('background-image', 'url(' + _getGif() + ')')});
     }
 
-    _changeImages($('body'));
-
-    document.addEventListener("DOMNodeInserted", function(e) {
-        _changeImages($(e.relatedNode));
-    }, false);
+    chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+        if (message === 'makeitbetter') {_changeImages($('body'))};
+    });
 })();
